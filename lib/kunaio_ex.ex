@@ -19,6 +19,14 @@ defmodule KunaioEx do
       get_and_process("order_book?market=#{left}#{right}")
   end
 
+  @doc """
+  Example: `trade_history("gol", "btc")`
+  """
+  def trade_history(left, right) do
+      get_and_process("trades?market=#{left}#{right}")
+  end
+
+
   def get_and_process(url) do
     with {:ok, %HTTPoison.Response{body: body}} <- get(url) do
       {:ok, body}

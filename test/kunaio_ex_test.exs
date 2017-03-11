@@ -16,4 +16,9 @@ defmodule KunaioExTest do
     {:ok, body}  = KunaioEx.order_book("gol","btc")
     assert %{"asks" => [ %{"created_at" => _ } | _ ]} = body
   end
+
+  test "golbtc trade history request" do
+    {:ok, body}  = KunaioEx.trade_history("gol","btc")
+    assert  [ %{"created_at" => _, "funds" => _} | _ ]  = body
+  end
 end
