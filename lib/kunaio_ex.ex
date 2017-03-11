@@ -1,7 +1,7 @@
-defmodule KunaioEx do
+defmodule Kunaio do
   use HTTPoison.Base
   @moduledoc """
-  Documentation for KunaioEx.
+  Documentation for Kunaio.
   """
 
   @doc """

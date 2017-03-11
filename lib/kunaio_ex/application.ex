@@ -1,4 +1,4 @@
-defmodule KunaioEx.Application do
+defmodule Kunaio.Application do
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -10,13 +10,13 @@ defmodule KunaioEx.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Starts a worker by calling: KunaioEx.Worker.start_link(arg1, arg2, arg3)
-      # worker(KunaioEx.Worker, [arg1, arg2, arg3]),
+      # Starts a worker by calling: Kunaio.Worker.start_link(arg1, arg2, arg3)
+      # worker(Kunaio.Worker, [arg1, arg2, arg3]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: KunaioEx.Supervisor]
+    opts = [strategy: :one_for_one, name: Kunaio.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

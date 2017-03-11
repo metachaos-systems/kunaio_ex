@@ -1,4 +1,4 @@
-# KunaioEx
+# Kunaio
 
 **TODO: Add description**
 
