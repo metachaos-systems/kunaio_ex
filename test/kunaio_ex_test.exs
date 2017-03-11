@@ -11,4 +11,9 @@ defmodule KunaioExTest do
     {:ok, body}  = KunaioEx.ticker("gol","btc")
     assert %{"at" => _, "ticker" => _} = body
   end
+
+  test "golbtc order book request" do
+    {:ok, body}  = KunaioEx.order_book("gol","btc")
+    assert %{"asks" => [ %{"created_at" => _ } | _ ]} = body
+  end
 end

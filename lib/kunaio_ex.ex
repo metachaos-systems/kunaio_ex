@@ -11,6 +11,14 @@ defmodule KunaioEx do
       get_and_process("tickers/#{left}#{right}")
   end
 
+
+  @doc """
+  Example: `order_book("gol", "btc")`
+  """
+  def order_book(left, right) do
+      get_and_process("order_book?market=#{left}#{right}")
+  end
+
   def get_and_process(url) do
     with {:ok, %HTTPoison.Response{body: body}} <- get(url) do
       {:ok, body}
