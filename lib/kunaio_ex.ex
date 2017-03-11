@@ -14,6 +14,13 @@ defmodule KunaioEx do
   """
   use HTTPoison.Base
 
+  @doc """
+  Example: `ticker("btc", "uah")` or `ticker("gol", "btc")`
+  """
+  def ticker(left, right) do
+      get("tickers/#{left}#{right}")
+  end
+
   def process_url(url) do
     "https://kuna.io/api/v2/" <> url
   end
