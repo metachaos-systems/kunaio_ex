@@ -46,7 +46,7 @@ defmodule Kunaio.Mixfile do
 
   defp package do
     [
-     name: :ex_golos,
+     name: :kunaio_ex,
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["ontofractal"],
      licenses: ["MIT"],
