@@ -32,6 +32,7 @@ defmodule Kunaio.Mixfile do
     [
       {:httpoison, "~> 0.10.0"},
       {:poison, ">= 0.0.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 end
