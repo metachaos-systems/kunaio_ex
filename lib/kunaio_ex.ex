@@ -5,16 +5,6 @@ defmodule KunaioEx do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> KunaioEx.hello
-      :world
-
-  """
-
-  @doc """
   Example: `ticker("btc", "uah")` or `ticker("gol", "btc")`
   """
   def ticker(left, right) do
