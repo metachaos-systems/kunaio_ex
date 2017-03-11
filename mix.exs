@@ -35,4 +35,21 @@ defmodule Kunaio.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
+
+  defp description do
+    """
+    Elixir HTTP client library and utilities for Kuna.io
+    """
+  end
+
+  defp package do
+    [
+     name: :ex_golos,
+     files: ["lib", "mix.exs", "README*", "LICENSE*"],
+     maintainers: ["ontofractal"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/cyberpunk-ventures/kunaio_ex"}
+   ]
+  end
+
 end
