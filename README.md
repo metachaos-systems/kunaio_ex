@@ -1,6 +1,7 @@
-# Kunaio
+# Kunaio_ex
 
-**TODO: Add description**
+Kunio_ex is an Elixir client for kuna.io cryptocurrency market. Work in progress.
+
 
 ## Installation
 
@@ -17,3 +18,10 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/kunaio_ex](https://hexdocs.pm/kunaio_ex).
 
+# Examples
+
+```
+{:ok, order_book} = Kunaio.order_book("gol", "btc")
+{:ok, trade_history} = Kunaio.trade_history("gol", "btc")
+{:ok, ticker} = Kunaio.ticker("gol", "btc")
+```
