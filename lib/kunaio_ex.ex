@@ -1,4 +1,5 @@
 defmodule KunaioEx do
+  use HTTPoison.Base
   @moduledoc """
   Documentation for KunaioEx.
   """
@@ -12,13 +13,20 @@ defmodule KunaioEx do
       :world
 
   """
-  use HTTPoison.Base
 
   @doc """
   Example: `ticker("btc", "uah")` or `ticker("gol", "btc")`
   """
   def ticker(left, right) do
-      get("tickers/#{left}#{right}")
+      get_and_process("tickers/#{left}#{right}")
+  end
+
+  def get_and_process(url) do
+    with {:ok, %HTTPoison.Response{body: body}} <- get(url) do
+      {:ok, body}
+    else
+      {:error, reason} -> {:error, reason}
+    end
   end
 
   def process_url(url) do

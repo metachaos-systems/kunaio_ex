@@ -8,7 +8,7 @@ defmodule KunaioExTest do
   end
 
   test "golbtc ticker request" do
-    {:ok, %HTTPoison.Response{body: body}}  = KunaioEx.ticker("gol","btc")
+    {:ok, body}  = KunaioEx.ticker("gol","btc")
     assert %{"at" => _, "ticker" => _} = body
   end
 end
